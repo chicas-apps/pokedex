@@ -1,0 +1,116 @@
+/* Basic styles */
+h1 {
+    color: #e4e4e4; /* Vibrant red */
+    font-family: 'Pokemon Solid', sans-serif; /* Use a Pokemon-themed font if available */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+}
+html {
+    height: 100%
+}
+body {
+    background: linear-gradient(to bottom right, #0c0e2e, #19d4be);
+}
+.pokemon-card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+    border-radius: 10px;  /* Rounded corners for the cards */
+}
+
+.pokemon-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+    filter: brightness(0.8); /* Darken the card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More prominent shadow on hover */
+}
+
+.pokemon-name {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.search-form {
+    text-align: center;
+}
+
+.search-form input[type="text"] {
+    border-radius: 20px; /* Rounded input field */
+    padding: 0.5rem 1rem;
+    border: 2px solid #ccc;
+    transition: border-color 0.2s;
+}
+
+.search-form input[type="text"]:focus {
+    border-color: #007bff; /* Highlight border on focus */
+    outline: none;
+}
+
+.pokemon-details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px; /* Adjust as needed */
+    margin: 0 auto;     /* Center the container horizontally */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.pokemon-details-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.pokemon-details-container p {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.pokemon-stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pokemon-stats p {
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+}
+
+.pokemon-sprites {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.pokemon-sprites img {
+    width: 150px; /* Adjust as needed */
+    height: auto;
+    margin: 0 1rem;
+}
+
+.card-title.text-center { 
+    color: #707070; /* Example: Dark gray color */
+}
+
+.pokemon-details-card {
+    border-radius: 15px;      /* Add rounded corners to the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    overflow: hidden;           /* Hide any overflowing content (e.g., from images) */
+    transition: transform 0.2s; /* Smooth transition for hover effect */
+}
+
+.pokemon-details-card:hover {
+    transform: scale(1.05);     /* Slightly enlarge the card on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+
+.pokemon-sprite {
+    border: 2px solid #ccc;     /* Add a subtle border to the sprites */
+    border-radius: 50%;         /* Make the sprites circular */
+    margin: 10px;               /* Add some spacing around the sprites */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a slight shadow */
+}

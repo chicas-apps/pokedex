@@ -1,0 +1,43 @@
+{% extends "bootstrap/base.html" %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center"> {## Center the card horizontally #}
+        <div class="col-md-8"> {## Adjust the column width as needed #}
+            <div class="card pokemon-details-card"> 
+                <div class="card-body">
+                    <h1 class="card-title text-center">{{ name }}</h1> 
+
+                    <div class="row"> {## Use Bootstrap grid for stats #}
+                        {% for i in stats %}
+                            <div class="col-md-6">
+                                <p><strong>{{ i.stat.name }}:</strong> {{ i.base_stat }}</p>
+                            </div>
+                        {% endfor %}
+                    </div>
+
+                    <p class="text-center"><strong>Type:</strong> 
+                        {% for i in types %}
+                            {{ i.type.name }}{% if not loop.last %}, {% endif %}
+                        {% endfor %}
+                    </p>
+
+                    <div class="pokemon-sprites text-center"> {## Center the sprites #}
+                        {% if sprites[2] != "" %}
+                            <img src="{{ sprites[2] }}" alt="{{ name }} front sprite" class="pokemon-sprite">
+                            <img src="{{ sprites[3] }}" alt="{{ name }} back sprite" class="pokemon-sprite">
+                        {% endif %}
+                    </div>
+
+                    <p class="text-center"><strong>Weight:</strong> {{ weight / 10 }} kg</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
